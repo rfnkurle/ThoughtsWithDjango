@@ -1,12 +1,12 @@
 
 from django.contrib import admin
-from django.urls import path
-from django.http import HttpResponse
+from django.urls import path, include
 
-def register(request):
-    return HttpResponse("Up and running")
+
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('signup', register)
+   path('', include('crm.urls')),
 ]
